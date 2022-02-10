@@ -1,5 +1,5 @@
 # Lección 02
-# AA 22 S1
+## EL5857 Aprendizaje Automático
 
 Archivos de GNU/Octave (también en el tecDigital) utilizados en la
 Lección 02 para ejemplificar el descenso de gradiente en el contexto
