@@ -31,12 +31,12 @@ A continuación se explican en detalle esos dos pasos.
 
 Usted puede ver la configuración de repositorios remotos con:
 
-$ git remote -v
+     $ git remote -v
 
 Usted puede entonces agregar un nuevo repositorio remoto
 "upstream" contra el cual usted puede realizar actualizaciones:
 
-$ git remote add upstream https://github.com/CursosLic-PabloAlvarado/aa_22s1_lecciones.git
+     $ git remote add upstream https://github.com/CursosLic-PabloAlvarado/aa_22s1_lecciones.git
 
 Por supuesto usted puede nombrar "upstream" como lo desee.  Ese es el
 nombre que por convención se usa como enlace para el origen al que se
@@ -45,7 +45,7 @@ que hacerlo una única vez.
 
 Para verificar que ese repositorio remoto esté configurado, pruebe de nuevo:
 
-$ git remote -v
+     $ git remote -v
 
 y eso puede verificarlo siempre, si no recuerda haberlo configurado.
 
@@ -64,37 +64,36 @@ miembros pueden sincronizarse con el repositorio ya actualizado.
 
 Asegúrese entonces de estar en su rama "main" (a veces se llama "master") con
 
-$ git checkout main     # (o git checkout master)
+     $ git checkout main     # (o git checkout master)
 
 y baje todos los cambios del repositorio "upstream"
 
-$ git fetch upstream
+     $ git fetch upstream
 
 Ahora, asegúrese de que la rama "main" tenga todos los cambios hechos
 en "upstream"
 
-$ git pull upstream main     # (o git pull upstream master)
+     $ git pull upstream main     # (o git pull upstream master)
 
 Si da un error, puede ser necesario habilitar este tipo de operación con 
 
-git pull upstream main --allow-unrelated-histories  # (o master)
+     $ git pull upstream main --allow-unrelated-histories  # (o master)
 
 y agregue los cambios hechos en el main de su repositorio remoto
 
-$ git push
+     $ git push
 
 Finalmente puede regresar a su rama de trabajo
 
-$ git checkout <mi_rama_de_trabajo>
+     $ git checkout <mi_rama_de_trabajo>
 
 e incorporar los cambios hechos, que ya estan en su master
 
-$ git merge main # (o master)
-
+     $ git merge main # (o master)
 
 Después de eso, los otros miembros del grupo hacen commit de aquello
 en lo que estén trabajando, y actualizan el repositorio con
 
-$ git pull
-$ git merge main # (o master)
+    $ git pull
+    $ git merge main # (o master)
 
