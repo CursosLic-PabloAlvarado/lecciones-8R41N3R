@@ -18,13 +18,14 @@ Antártica.
    2. Extraiga todos los datos correspondientes a 'MALE' (i.e. y=0)
    3. Calcule los parámetros correspondientes a las distribuciones
       gaussianas de cada clase (Ver lección 8, folio 9).
-      La función mvnpdf del paquete statistics le puede ser útil
-      (multivariate normal probability density function).
+      Las funciones mean y cov le serán de utilidad.
 
    Para los datos de prueba
-   4. Calcule la probabilidad de que el dato sea de la clase 'FEMALE',
+   1. Calcule la probabilidad de que el dato sea de la clase 'FEMALE',
       dado cada dato
-   5. Calcule el error empírico con los datos de entrenamiento y con
+      La función mvnpdf del paquete statistics le puede ser útil
+      (multivariate normal probability density function).
+   2. Calcule el error empírico con los datos de entrenamiento y con
       los datos de prueba.
 
 
@@ -38,3 +39,17 @@ Antártica.
    distribución gaussiana, por lo que símplemente tenemos que calcular la
    varianza y la media de esas distribuciones.
    
+   Para el entrenamiento
+   1. Extraiga todos los datos correspondientes a 'FEMALE' (i.e. y=1)
+   2. Extraiga todos los datos correspondientes a 'MALE' (i.e. y=0)
+   3. Calcule los parámetros correspondientes a las distribuciones
+      gaussianas de cada característica por separado.
+      Las funciones mean y var le pueden ser útiles. 
+      
+   Para los datos de prueba
+   1. Calcule la probabilidad a posteriori de que el dato sea de la
+      clase 'FEMALE', dado cada dato. (Folio 22)
+   2. Calcule el error empírico con los datos de entrenamiento y con
+      los datos de prueba.
+
+
