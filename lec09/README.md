@@ -13,6 +13,21 @@ Antártica.
    gaussiano discriminador, revisado en la lección 8, para clasificar
    si un determinado dato corresponde a un pingüino hembra o macho.
 
+   Para el entrenamiento
+   1. Extraiga todos los datos correspondientes a 'FEMALE' (i.e. y=1)
+   2. Extraiga todos los datos correspondientes a 'MALE' (i.e. y=0)
+   3. Calcule los parámetros correspondientes a las distribuciones
+      gaussianas de cada clase (Ver lección 8, folio 9).
+      La función mvnpdf del paquete statistics le puede ser útil
+      (multivariate normal probability density function).
+
+   Para los datos de prueba
+   4. Calcule la probabilidad de que el dato sea de la clase 'FEMALE',
+      dado cada dato
+   5. Calcule el error empírico con los datos de entrenamiento y con
+      los datos de prueba.
+
+
 2. En el archivo gaussnb.m deberá implementar el algoritmo de naïve Bayes
    gaussiano, para hacer la misma clasificación que en el caso anterior.
    
