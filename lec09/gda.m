@@ -30,9 +30,11 @@ Ytest=Yte(:,1);
 #    gaussianas de cada clase (Ver lección 8, folio 9)
 #
 # Para los datos de prueba
-# 4. Calcule la probabilidad de que el dato sea de la clase 'FEMALE',
-#    dado cada dato.
+# 4. Calcule la predicción de que el dato sea de la clase 'FEMALE',
+#    dado cada dato; es decir, indique con y=1 si el dato es de esa
+#    clase o 0 de otro modo.
 #    La función mvnpdf le puede ser útil (paquete statistics)
+#    (multivariate normal probability density function).
 # 5. Calcule el error empírico con los datos de entrenamiento y con
 #    los datos de prueba.
 

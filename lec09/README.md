@@ -21,8 +21,9 @@ Antártica.
       Las funciones mean y cov le serán de utilidad.
 
    Para los datos de prueba
-   1. Calcule la probabilidad de que el dato sea de la clase 'FEMALE',
-      dado cada dato
+   1. Calcule la predicción de que el dato sea de la clase 'FEMALE',
+      dado cada dato; es decir, indique con y=1 si el dato es de esa
+      clase o 0 de otro modo.
       La función mvnpdf del paquete statistics le puede ser útil
       (multivariate normal probability density function).
    2. Calcule el error empírico con los datos de entrenamiento y con
@@ -44,11 +45,12 @@ Antártica.
    2. Extraiga todos los datos correspondientes a 'MALE' (i.e. y=0)
    3. Calcule los parámetros correspondientes a las distribuciones
       gaussianas de cada característica por separado.
-      Las funciones mean y var le pueden ser útiles. 
+      Las funciones mean y std le pueden ser útiles. 
       
    Para los datos de prueba
-   1. Calcule la probabilidad a posteriori de que el dato sea de la
-      clase 'FEMALE', dado cada dato. (Folio 22)
+   1. Calcule la predicción de que el dato sea de la clase 'FEMALE',
+      dado cada dato; es decir, indique con y=1 si el dato es de esa
+      clase o 0 de otro modo. (Folio 22)
    2. Calcule el error empírico con los datos de entrenamiento y con
       los datos de prueba.
 
