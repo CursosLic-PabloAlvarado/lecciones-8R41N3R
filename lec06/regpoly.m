@@ -4,6 +4,12 @@
 
 
 function z = regpoly(p,X,y,N)
+  
+  assert(columns(y)==1);
+  assert(rows(X)==rows(y));
+  assert(N>0);
+  assert(columns(p)==columns(X),"Dimensiones en p y en X deben ser iguales");
+  
   ## Utilice los datos X con valor y, para hacer la regresión de un
   ## polinomio de grado N, donde los puntos a evaluar con la regresión
   ## están dados por p
