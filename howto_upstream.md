@@ -8,7 +8,7 @@ Como recordatorio: cuando usted acepta una invitación del Github
 Classroom, siguiendo el enlace que le envía el profesor, lo que ocurre
 por detrás es un "fork" del repositorio original del profesor, es
 decir, en Github se crea un nuevo respositorio que es una copia del
-original.  Esa copia del repositorio tiene un nombre el nombre
+original.  Esa copia del repositorio tiene un nombre con el nombre
 original más un sufijo dado por el nombre del usuario en git, o el
 nombre del grupo de trabajo.
 
@@ -36,7 +36,7 @@ Usted puede ver la configuración de repositorios remotos con:
 Usted puede entonces agregar un nuevo repositorio remoto
 "upstream" contra el cual usted puede realizar actualizaciones:
 
-     $ git remote add upstream https://github.com/CursosLic-PabloAlvarado/aa_22s1_lecciones.git
+     $ git remote add upstream https://github.com/CursosLic-PabloAlvarado/aa_23s1_lecciones.git
 
 Por supuesto usted puede nombrar "upstream" como lo desee.  Ese es el
 nombre que por convención se usa como enlace para el origen al que se
