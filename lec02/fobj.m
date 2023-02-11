@@ -13,13 +13,31 @@
 D=load("escazu.dat");
 
 ## Rescue for now just the area and price columns
-X = [ones(rows(D),1) D(:,1)]; ## Design matrix
-Y = D(:,4);                   ## Ground-truth
+areas = D(:,1);
+prices = D(:,4);
+m = rows(D); ## How many data?
+
+
+X = [ones(m,1) areas]; ## Design matrix
+Y = prices;
 
 ## Objective function of the parameters theta, requires also the data X,Y.
 ## - theta holds one configuration set in each row.
 ## - we use here 'broadcasting' of Y
-J=@(theta) 0.5*sum((Y-X*theta').^2,1);
+J1=@(theta) 0.5*sum((Y-X*theta').^2,1);
+
+## This version separates theta0 from the rest (avoids needing 1's in X)
+J2=@(theta) 0.5*sum((Y-(X(:,2:end)*theta(:,2:end)'+theta(:,1)')).^2,1);
+
+## This version does everything 'by hand', but is limited to 'linear'
+## regression.  It uses broadcasting to avoid creating a matrix of prices
+J3=@(theta) 0.5*sum(( ( theta(:,1) + theta(:,2)*areas') -
+                       prices').^2,2);
+
+
+## Which version?
+J=J1;
+
 
 th0=-300:10:300;
 th1=0.0:0.05:3;
