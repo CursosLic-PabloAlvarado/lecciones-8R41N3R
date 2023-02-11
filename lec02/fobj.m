@@ -1,7 +1,7 @@
 #!/usr/bin/octave-cli --persist
 
-## (C) 2020 Pablo Alvarado
-## EL5852 Introducción al Reconocimiento de Patrones
+## (C) 2020-2023 Pablo Alvarado
+## EL5857 Aprendizaje Automático
 ## Escuela de Ingeniería Electrónica
 ## Tecnológico de Costa Rica
 
@@ -13,18 +13,16 @@
 D=load("escazu.dat");
 
 ## Rescue for now just the area and price columns
-A=[D(:,1) D(:,4)];
+X = [ones(rows(D),1) D(:,1)]; ## Design matrix
+Y = D(:,4);                   ## Ground-truth
 
-## Objective function of the parameters theta, requires also the data A
-## First create a matrix without the square, where the j-column has
-## theta_0 + theta_1*x_1^(j)-y^(j).  Then, square all elements of that matrix
-## and finally add up all elements in each row
-J=@(theta) 0.5*sum((theta(:,1)*ones(1,rows(A)) +
-                    theta(:,2)*A(:,1)' -
-                    ones(rows(theta),1)*A(:,2)').^2,2);
+## Objective function of the parameters theta, requires also the data X,Y.
+## - theta holds one configuration set in each row.
+## - we use here 'broadcasting' of Y
+J=@(theta) 0.5*sum((Y-X*theta').^2,1);
 
-th0=-200:10:400;
-th1=0.0:0.05:2;
+th0=-300:10:300;
+th1=0.0:0.05:3;
 
 [tt0,tt1] = meshgrid(th0,th1);
 
@@ -43,11 +41,12 @@ zlabel('J({\bf \theta})');
 ## Plot the contours in 3D
 
 figure(2,'name','Curvas de nivel');
-levels= 4.11e+4*(1.3.^[0:1:15]);
+levels= linspace(1.001*min(jj(:)),4e+6,20);
 contour3(tt0,tt1,jj,levels,"linewidth",3);
 xlabel('{\theta_0}');
 ylabel('{\theta_1}');
 zlabel('J({\bf \theta})');
+
 
 view(0,90);
 
