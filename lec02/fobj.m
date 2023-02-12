@@ -36,7 +36,7 @@ J3=@(theta) 0.5*sum(( ( theta(:,1) + theta(:,2)*areas') -
 
 
 ## Which version?
-J=J1;
+J=J3;
 
 
 th0=-300:10:300;
@@ -68,3 +68,28 @@ zlabel('J({\bf \theta})');
 
 view(0,90);
 
+## Measure the time of each method:
+
+reps=500;
+printf("Time measurements averaging %i computations:\n",reps);
+
+tic;
+for i=1:reps
+  jj=reshape(J1(theta),size(tt0));
+endfor;
+t=toc;
+printf("Method J1: %d ms\n",t*1000/reps);
+
+tic;
+for i=1:reps
+  jj=reshape(J2(theta),size(tt0));
+endfor;
+t=toc;
+printf("Method J2: %d ms\n",t*1000/reps);
+
+tic;
+for i=1:reps
+  jj=reshape(J3(theta),size(tt0));
+endfor;
+t=toc;
+printf("Method J3: %d ms\n",t*1000/reps);
