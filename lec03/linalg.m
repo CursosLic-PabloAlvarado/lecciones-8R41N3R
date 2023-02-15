@@ -12,11 +12,11 @@ minPrecio = min(y);
 maxArea = max(x);
 maxPrecio = max(y);
 
-
 ## Use las ecuaciones normales para calcular los parámetros de
 ## regresión lineal
 X = [ones(rows(x),1),x];
 theta = pinv(X'*X)*X'*y;
+disp(theta);
 
 ## Grafique los puntos originales y la recta de regresión lineal con
 ## al menos 100 puntos
