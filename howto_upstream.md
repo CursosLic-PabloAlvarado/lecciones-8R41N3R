@@ -74,6 +74,11 @@ Ahora, asegúrese de que la rama "main" tenga todos los cambios hechos
 en "upstream"
 
      $ git pull upstream main     # (o git pull upstream master)
+     
+Si git no ha sido configurado, le va a preguntar qué quiere decir usted con 'pull'.
+Puede usar lo que git sugiere usar por defecto:
+
+    $ git config pull.rebase false
 
 Si da un error, puede ser necesario habilitar este tipo de operación con 
 
