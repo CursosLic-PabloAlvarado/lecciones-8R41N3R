@@ -25,4 +25,8 @@ Debe ahora calcular:
 3. La probabilidad condicional general de cada letra, dado que la anterior es
    otra letra.
 4. La probabilidad condicional general de cada letra, dado que otra letra está
-   presente en la palabra.
+   presente en la palabra.   
+5. Ejecute el script gauss.m y modifique (co)varianzas y valores
+   medios para comprender su efecto.  ¿Qué representa cada elipse,
+   probabilísticamente hablando?
+6. 
