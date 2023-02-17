@@ -35,4 +35,8 @@ Debe ahora calcular:
    función de densidad probabilística de concatenar varias variables
    uniformemente distribuidas.
 8. Utilice el cuaderno Probabilidad.ipynb para repasar cómo hacer cálculos
-   básicos 
+   básicos.
+9. Analice el código en el cuaderno probmaps/color-probability-maps.ipynb,
+   que implementa de forma ingenua y vectorizada el método presentado en la
+   teoría para calcular la probabilidad de que pixeles correspondan a piel
+   dado su color.
