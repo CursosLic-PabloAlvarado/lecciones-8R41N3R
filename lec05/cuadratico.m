@@ -41,8 +41,8 @@ zlabel("y");
 ## cuadrática sobre una rejilla menos densa que la original
 
 partition=25;
-px1=linspace(min(x1),max(x1),partition);
-px2=linspace(min(x2),max(x2),partition);
+px1=round(linspace(min(x1),max(x1),partition));
+px2=round(linspace(min(x2),max(x2),partition));
 
 [pxx1,pxx2] = meshgrid(px1,px2);
 
