@@ -2,7 +2,6 @@
 
 ## Crea datos de referencia ideales
 
-
 x1=1:1000;
 x2=1:800;
 
@@ -20,10 +19,10 @@ A=f*A; B=f*B;
 ygt = dot(Xgt,Xgt*A',2) + Xgt*B + C;
 
 ## Seleccionemos ahora un subset de datos para el experimento
-m=5000; # Número de datos de entrenamiento
+m=1000; # Número de datos de entrenamiento
 idx=randperm(rows(ygt),m);
 X=Xgt(idx,:);
-y=ygt(idx) + randn(size(y))*2; ## Agregue ruido
+y=ygt(idx) + randn(m,1)*2; ## Agregue ruido
 
 figure(1,"name","Datos de entrenamiento");
 plot3(X(:,1),X(:,2),y,'.');
