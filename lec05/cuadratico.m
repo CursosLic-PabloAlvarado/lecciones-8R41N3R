@@ -1,3 +1,10 @@
+#!/usr/bin/octave-cli --persist
+
+## (C) 2023 Pablo Alvarado
+## EL5857 Aprendizaje Automático
+## Escuela de Ingeniería Electrónica
+## Tecnológico de Costa Rica
+
 1;
 
 ## Crea datos de referencia ideales
