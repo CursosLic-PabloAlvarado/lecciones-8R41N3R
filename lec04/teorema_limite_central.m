@@ -1,6 +1,6 @@
 ## Generemos muchos puntos aleatorios, tomados de una distribución
 ## uniforme
-m=1000000; ## Número de puntos
+m=2000000; ## Número de puntos
 bins=50;
 
 ## Acumulemos muestras aleatorias uniformemente distribuidas para
