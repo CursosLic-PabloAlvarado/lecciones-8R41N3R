@@ -20,10 +20,12 @@ Xgt = [xx1(:),xx2(:)];
 ## Construcción de función cuadrática para el experimento (ajuste empírico)
 A=[2 0.1;0.1 1]; B=-1000*[2; 1]; C=100;
 f=1e-4;
-A=f*A; B=f*B; 
+A=f*A; B=f*B;
 
 ## Evalúe eficientemente x' A x + B' x + C donde x es cada columna de D
 ygt = dot(Xgt,Xgt*A',2) + Xgt*B + C;
+##
+G = reshape(ygt, length(x2), length(x1));
 
 ## Seleccionemos ahora un subset de datos para el experimento
 m=1000; # Número de datos de entrenamiento
@@ -33,6 +35,8 @@ y=ygt(idx) + randn(m,1)*2; ## Agregue ruido
 
 figure(1,"name","Datos de entrenamiento");
 plot3(X(:,1),X(:,2),y,'.');
+hold on;
+surf(xx1,xx2,G);
 xlabel("x_1");
 ylabel("x_2");
 zlabel("y");
